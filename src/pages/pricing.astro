@@ -1,0 +1,18 @@
+---
+import Base from "../layouts/Base.astro";
+const meta = { title: "Pricing | CurbEase", desc: "Transparent pricing for bin cleaning and residential valet." };
+---
+<Base {...meta}>
+  <h1>Pricing</h1>
+  <h2>Bin Cleaning</h2>
+  <ul class="cards">
+    <li><h3>One-time</h3><p>Up to 2 bins.</p><a class="btn" href="/contact" data-sku="BIN_ONE_TIME">Book</a></li>
+    <li><h3>Quarterly</h3><p>Auto-scheduled every 3 months.</p><a class="btn" href="/contact" data-sku="BIN_QUARTERLY">Start</a></li>
+  </ul>
+  <h2>Residential Valet</h2>
+  <ul class="cards">
+    <li><h3>Basic — $30/mo</h3><a class="btn" href="/contact" data-sku="BASIC">Start Basic</a></li>
+    <li><h3>Standard — $45/mo</h3><a class="btn" href="/contact" data-sku="STANDARD">Start Standard</a></li>
+    <li><h3>Premium — $60/mo</h3><a class="btn" href="/contact" data-sku="PREMIUM">Start Premium</a></li>
+  </ul>
+</Base>

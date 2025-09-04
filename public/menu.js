@@ -1,0 +1,1 @@
+(function(){const t=document.querySelector('[data-menu-toggle]');const n=document.querySelector('[data-menu]');if(!t||!n)return;t.addEventListener('click',()=>{const o=n.getAttribute('data-open')==='true';n.setAttribute('data-open',String(!o));});})();
