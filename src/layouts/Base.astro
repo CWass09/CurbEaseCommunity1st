@@ -1,51 +1,69 @@
+
 ---
-import "../styles/global.css";
-const { title = 'CurbEase Valet', description = 'Weekly curbside bin valet and commercial trash valet in North Texas' } = Astro.props;
+const { title = "CurbEase Valet", desc = "Bin cleaning and residential/commercial valet in Prosper & Light Farms." } = Astro.props;
 ---
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta name="theme-color" content="#0B1F3A" />
-    <!-- GA4 placeholder: replace G-XXXXXXX -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-    <script>
+    <meta name="description" content={desc} />
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="preload" href="/assets/logo_horizontal_final.svg" as="image" />
+    <meta name="robots" content="index,follow" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CE57NMTBW9"></script>
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-XXXXXXX');
+      gtag('config', 'G-CE57NMTBW9');
     </script>
-    <link rel="icon" href="/assets/favicon.ico" />
-      <link rel="stylesheet" href="/fixes.css" />
+    <style>
+      body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;color:#334155;margin:0;line-height:1.5;background:#fff}
+      .wrap{max-width:1200px;margin:0 auto;padding:0 16px}
+      .site-header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e7eb;z-index:10}
+      .site-header .row{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+      .nav a{margin:0 12px;text-decoration:none;color:#0b1f3a;font-weight:600}
+      .menu-toggle{font-size:24px;background:none;border:1px solid #cbd5e1;border-radius:8px;padding:4px 10px}
+      .nav[data-open="false"]{display:none}
+      @media(min-width:992px){.menu-toggle{display:none} .nav{display:flex !important}}
+      .hero{padding:56px 0;background:linear-gradient(0deg,#f8fafc,#fff)}
+      .hero h1{color:#0b1f3a;font-size:clamp(28px,4vw,44px);margin:0 0 8px}
+      .cta-row a{margin-right:12px}
+      .btn{display:inline-block;padding:12px 18px;border-radius:10px;border:1px solid #0b1f3a;text-decoration:none}
+      .btn-primary{background:#0b1f3a;color:#fff}
+      .btn-secondary{background:#2AAE6F;color:#fff;border-color:#2AAE6F}
+      .btn-outline{background:#fff;color:#0b1f3a}
+      .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;list-style:none;padding:0}
+      .cards li{border:1px solid #e2e8f0;border-radius:14px;padding:16px;background:#fff}
+      footer{border-top:1px solid #e5e7eb;margin-top:40px;padding:24px 0;color:#64748b;font-size:14px}
+    </style>
   </head>
   <body>
-    <header class="header" aria-label="Primary">
-      <div class="container inner">
-        <a class="brand" href="/" aria-label="Home">
-          <img src="/assets/logo_horizontal_final_512.png" class="logo" alt="CurbEase logo" onerror="this.src='/assets/logo_horizontal_final.svg'">
-          <div><div class="badge">CurbEase Bin Valet</div><small class="sub">Prosper • Light Farms</small></div>
+    <header class="site-header">
+      <div class="wrap row">
+        <a href="/" class="logo" aria-label="Home">
+          <img src="/assets/logo_horizontal_final.svg" alt="CurbEase" height="40" />
         </a>
-        <button class="menu-toggle" aria-label="Open menu">Menu</button>
-        <nav class="nav-main">
-          <a href="/#services">Services</a>
+        <button class="menu-toggle" data-menu-toggle aria-label="Toggle Menu">☰</button>
+        <nav class="nav" data-menu data-open="false">
+          <a href="/bin-cleaning">Bin Cleaning</a>
+          <a href="/valet">Residential Valet</a>
+          <a href="/commercial">Commercial</a>
           <a href="/pricing">Pricing</a>
           <a href="/faq">FAQ</a>
-          <a href="/about">About</a>
           <a href="/contact">Contact</a>
-          <a class="cta" href="/signup">Subscribe</a>
         </nav>
-        <div class="actions">
-          <a class="cta" href="/signup">Sign Up</a>
-        </div>
       </div>
     </header>
-    <main><slot /></main>
-    <footer class="footer">
-      <div class="container">
-        <p>© CurbEase Valet · Police-officer-owned · Prosper · Celina · Light Farms</p>
-      </div>
+    <main class="wrap">
+      <slot />
+    </main>
+    <footer>
+      <div class="wrap">© 2025 CurbEase. Police-officer-owned. Serving Prosper & Light Farms.</div>
     </footer>
+    <script src="/menu.js" defer></script>
   </body>
 </html>

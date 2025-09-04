@@ -1,0 +1,28 @@
+
+---
+import Base from "../layouts/Base.astro";
+const meta = { title: "Residential Bin Valet | CurbEase", desc: "Weekly set-out & return with reminders. Law-enforcement owned." };
+---
+<Base {...meta}>
+  <h1>Residential Bin Valet</h1>
+  <p>Weekly set-out the evening before pickup and return after collection. Reminders included.</p>
+
+  <h2>Plans</h2>
+  <ul class="cards">
+    <li>
+      <h3>Basic — $30/mo</h3>
+      <ul><li>Set-out only (2 bins)</li><li>Trash + recycle</li></ul>
+      <a class="btn" href="#">Start Basic</a>
+    </li>
+    <li>
+      <h3>Standard — $45/mo</h3>
+      <ul><li>Set-out + return (2 bins)</li><li>Travel holds</li></ul>
+      <a class="btn" href="#">Start Standard</a>
+    </li>
+    <li>
+      <h3>Premium — $60/mo</h3>
+      <ul><li>Set-out + return (up to 4 bins)</li><li>1 free bin cleaning / month</li></ul>
+      <a class="btn" href="#">Start Premium</a>
+    </li>
+  </ul>
+</Base>
