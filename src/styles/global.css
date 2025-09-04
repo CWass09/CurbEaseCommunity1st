@@ -1,23 +1,41 @@
 
-:root{--primary:#0B1F3A;--accent:#2AAE6F;--text:#334155;--bg:#F8FAFC;--maxw:1200px}
-*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Arial}
+:root{--primary:#0B1F3A;--accent:#2AAE6F;--text:#334155;--bg:#F8FAFC;--muted:#e5e7eb;--maxw:1200px}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial}
 a{color:var(--primary);text-decoration:none}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
-.header{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e7eb}
-.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
-nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0}
-.hero{padding:48px 0;background:linear-gradient(180deg,#fff,#eef2f7)}
+.header{position:sticky;top:0;z-index:50;background:#0b1f3a;color:#fff;border-bottom:1px solid #0a1930}
+.header .inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand{display:flex;align-items:center;gap:12px;color:#fff}
+.brand .logo{height:34px;border-radius:6px}
+.badge{font-weight:700}
+.sub{opacity:.85}
+.menu-toggle{display:none;background:#12284c;color:#fff;border:1px solid #1a3668;border-radius:10px;padding:8px 10px}
+.nav-main{display:flex;gap:16px}
+.nav-main a{color:#dbeafe;padding:8px 10px;border-radius:10px}
+.nav-main a:hover{background:#0f2446}
+.actions .cta{background:var(--accent);color:#fff;padding:10px 14px;border-radius:10px;font-weight:700}
+.hero{padding:56px 0;background:linear-gradient(180deg,#0b1f3a,#0b1f3a 60%,#eef2f7 60%)}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;color:#fff}
+.hero h1{margin:0 0 8px;font-size:44px;line-height:1.1}
+.hero p{margin:0 0 14px}
 .pills{display:flex;gap:10px;flex-wrap:wrap}
-.pill{border:1px solid #e5e7eb;border-radius:999px;padding:8px 14px}
-.pill.primary{background:var(--primary);color:#fff;border-color:var(--primary)}
+.pill{border:1px solid #1a3668;background:#0f2446;color:#dbeafe;border-radius:999px;padding:8px 14px}
+.pill.primary{background:var(--accent);border-color:var(--accent);color:#062b18}
 .section{padding:56px 0}
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px}
-.pricing{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-.btn{display:inline-block;background:var(--primary);color:#fff;padding:10px 14px;border-radius:10px}
-.btn.secondary{background:var(--accent)}
-.footer{background:#0b1f3a;color:#cbd5e1;padding:32px 0;margin-top:40px}
-.hero-image{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;border:1px solid #e5e7eb}
-.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-.badge{background:#fff;border:1px solid #e5e7eb;border-radius:999px;padding:6px 10px;font-size:13px}
-@media(max-width:980px){.cards,.pricing{grid-template-columns:1fr}}
+.section h2{margin:0 0 10px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--muted);border-radius:14px;padding:20px;box-shadow:0 8px 24px rgba(2,6,23,.06)}
+.pricing{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.price-card{background:#fff;border:2px solid var(--muted);border-radius:16px;padding:22px}
+.btn{display:inline-block;background:var(--primary);color:#fff;padding:10px 14px;border-radius:10px;font-weight:700}
+.btn.secondary{background:var(--accent);color:#062b18}
+.footer{background:#0b1f3a;color:#cbd5e1;padding:36px 0;margin-top:48px}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
+.badge-chip{background:#fff;border:1px solid var(--muted);border-radius:999px;padding:6px 10px;font-size:13px}
+@media(max-width:980px){
+  .nav-main{display:none}
+  .menu-toggle{display:inline-block}
+  .hero .wrap{grid-template-columns:1fr}
+  .cards,.pricing{grid-template-columns:1fr}
+}

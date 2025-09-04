@@ -3,12 +3,68 @@ import Base from "../layouts/Base.astro";
 import Hero from "../components/Hero.astro";
 ---
 <Base title="CurbEase Valet — Weekly Bin Valet & Commercial Trash Valet">
-  <Hero title="Weekly bin valet made simple" subtitle="Residential and commercial plans with clear pricing." />
-  <section class="section">
+  <section class="hero">
+    <div class="container wrap">
+      <div>
+        <h1>Bin day, handled.</h1>
+        <p>Residential and commercial plans with clear pricing.</p>
+        <div class="pills">
+          <a href="/residential" class="pill primary">Residential</a>
+          <a href="/commercial" class="pill">Commercial</a>
+        </div>
+        <div class="badges">
+          <span class="badge-chip">Weekly curbside</span>
+          <span class="badge-chip">Trash + Recycle</span>
+          <span class="badge-chip">Police-officer-owned</span>
+        </div>
+      </div>
+      <div>
+        <img class="hero-image" src="/assets/logo_horizontal_final_512.png" alt="CurbEase">
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="section">
     <div class="container cards">
-      <div class="card"><h3>Residential</h3><p>Weekly set-out and return. Trash + recycle.</p><p><a class="btn" href="/residential">Learn more</a></p></div>
-      <div class="card"><h3>Bin Cleaning</h3><p>One-time or quarterly deep clean add-on.</p><p><a class="btn secondary" href="/cleaning">Cleaning</a></p></div>
-      <div class="card"><h3>Commercial</h3><p>Door-to-dumpster evening collection with reporting.</p><p><a class="btn" href="/commercial">Property solutions</a></p></div>
+      <div class="card">
+        <h3>Residential Valet</h3>
+        <p>Weekly set-out and return. Trash + recycle.</p>
+        <p><a class="btn" href="/residential">Learn more</a></p>
+      </div>
+      <div class="card">
+        <h3>Bin Cleaning</h3>
+        <p>One-time or quarterly deep clean add-on.</p>
+        <p><a class="btn secondary" href="/cleaning">Cleaning</a></p>
+      </div>
+      <div class="card">
+        <h3>Commercial Valet</h3>
+        <p>Door-to-dumpster evening collection with reporting.</p>
+        <p><a class="btn" href="/commercial">Property solutions</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="section">
+    <div class="container">
+      <h2>Simple pricing</h2>
+      <div class="pricing">
+        <div class="price-card">
+          <h3>Basic</h3><p>$30/mo</p><p><a class="btn" href="/signup#basic">Subscribe</a></p>
+        </div>
+        <div class="price-card">
+          <h3>Standard</h3><p>$40/mo</p><p><a class="btn secondary" href="/signup#standard">Subscribe</a></p>
+        </div>
+        <div class="price-card">
+          <h3>Premium</h3><p>$55/mo</p><p><a class="btn" href="/signup#premium">Subscribe</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mission" class="section">
+    <div class="container">
+      <h2>Our Mission</h2>
+      <p>Serve our neighbors with reliable curbside service and support veteran charities.</p>
     </div>
   </section>
 </Base>

@@ -20,18 +20,24 @@ const { title = 'CurbEase Valet', description = 'Weekly curbside bin valet and c
     <link rel="icon" href="/assets/favicon.ico" />
   </head>
   <body>
-    <header class="header">
-      <div class="container header-inner">
-        <a href="/" class="logo"><img src="/assets/logo_horizontal_final_512.png" alt="CurbEase" style="height:34px"/></a>
-        <nav>
-          <ul>
-            <li><a href="/residential">Residential</a></li>
-            <li><a href="/commercial">Commercial</a></li>
-            <li><a href="/pricing">Pricing</a></li>
-            <li><a href="/faq">FAQ</a></li>
-            <li><a class="btn" href="/signup">Sign Up</a></li>
-          </ul>
+    <header class="header" aria-label="Primary">
+      <div class="container inner">
+        <a class="brand" href="/" aria-label="Home">
+          <img src="/assets/logo_horizontal_final_512.png" class="logo" alt="CurbEase logo" onerror="this.src='/assets/logo_horizontal_final.svg'">
+          <div><div class="badge">CurbEase Bin Valet</div><small class="sub">Prosper • Light Farms</small></div>
+        </a>
+        <button class="menu-toggle" aria-label="Open menu">Menu</button>
+        <nav class="nav-main">
+          <a href="/#services">Services</a>
+          <a href="/pricing">Pricing</a>
+          <a href="/faq">FAQ</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a class="cta" href="/signup">Subscribe</a>
         </nav>
+        <div class="actions">
+          <a class="cta" href="/signup">Sign Up</a>
+        </div>
       </div>
     </header>
     <main><slot /></main>
