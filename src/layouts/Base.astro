@@ -1,0 +1,24 @@
+---
+import "../styles/global.css";
+const { title = "CurbEase", desc = "Bin cleaning and residential/commercial valet in Prosper & Light Farms." } = Astro.props;
+---
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>{title}</title><meta name="description" content={desc}/>
+<link rel="icon" href="/assets/favicon.ico"/>
+<link rel="preload" href="/assets/logo_horizontal_final.svg" as="image"/>
+<meta name="robots" content="index,follow"/>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CE57NMTBW9"></script>
+<script is:inline>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-CE57NMTBW9');</script>
+</head><body>
+<header class="site-header"><div class="wrap row">
+<a href="/" class="logo" aria-label="Home"><img src="/assets/logo_horizontal_final.svg" alt="CurbEase" height="40"/></a>
+<button class="menu-toggle" data-menu-toggle aria-label="Toggle Menu">☰</button>
+<nav class="nav" data-menu data-open="false">
+<a href="/bin-cleaning">Bin Cleaning</a><a href="/valet">Residential Valet</a><a href="/commercial">Commercial</a><a href="/pricing">Pricing</a><a href="/faq">FAQ</a><a href="/contact">Contact</a>
+</nav></div></header>
+<main class="wrap"><slot /></main>
+<footer><div class="wrap">© 2025 CurbEase. Police-officer-owned. Serving Prosper & Light Farms.</div></footer>
+<script src="/menu.js" defer></script>
+</body></html>
